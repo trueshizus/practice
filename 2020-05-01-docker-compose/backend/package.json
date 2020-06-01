@@ -1,0 +1,14 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "\"The backend of our test project. I will provide an static endpoint showing a list with and id and a timestapm using Redis.",
+  "main": "index.js",
+  "author": "Shizus",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
