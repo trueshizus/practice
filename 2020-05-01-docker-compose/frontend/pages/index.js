@@ -3,16 +3,17 @@ import useSWR from 'swr'
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 
-export default function Home() {
-  const { data, error } = useSWR('/api/current_views', fetcher)
+function Home({data}) {
 
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
 
+  console.log(data);
+
   return (
     
     <div className="container">
-    <span> `${data.current_views}`</span> 
+      <span>{data.current_views}</span> 
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
@@ -217,3 +218,14 @@ export default function Home() {
     </div>
   )
 }
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch('/total_views')
+  const data = await res.json()
+
+  // Pass data to the page via props
+  return { props: { data } }
+}
+
+export default Home
