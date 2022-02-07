@@ -1,0 +1,9 @@
+{
+  "name": "2021-01-15-vim-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.1.3"
+  }
+}

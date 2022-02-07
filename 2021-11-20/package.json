@@ -1,0 +1,22 @@
+{
+  "name": "2021-11-20",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.30.2",
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.35",
+    "eslint": "7",
+    "eslint-config-next": "12.0.4",
+    "typescript": "^4.5.2"
+  }
+}
